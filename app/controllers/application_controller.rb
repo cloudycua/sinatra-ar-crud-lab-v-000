@@ -25,5 +25,5 @@ class ApplicationController < Sinatra::Base
     @posts = Post.all
     erb :index
   end
-  
+
 end
