@@ -8,7 +8,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get '/' do
-
+# load new form
+  get '/posts/new' do
+    erb :new
   end
 end
