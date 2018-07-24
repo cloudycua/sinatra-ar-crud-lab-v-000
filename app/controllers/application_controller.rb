@@ -35,4 +35,9 @@ class ApplicationController < Sinatra::Base
 
 # looks up post by id
 # loads edit form with existing post displayed in form
+  get '/posts/:id/edit' do
+    @posts = Post.find_by_id(params[:id])
+    erb :edit
+  end
+
 end
