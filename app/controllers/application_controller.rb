@@ -47,4 +47,7 @@ class ApplicationController < Sinatra::Base
     @post.content = params[:content]
     @post.save
     erb :show
+  end
+
+  
 end
