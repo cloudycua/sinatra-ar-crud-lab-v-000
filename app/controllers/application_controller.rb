@@ -51,5 +51,10 @@ class ApplicationController < Sinatra::Base
 
 # deletes post by id and redirect to page showing all posts
 # delete/action button is in the show.erb
+  delete '/posts/:id/delete' do
+    @post = Post.find_by_id(params[:id])
+    @post.delete
+    rediret to '/posts'
+  end
 
 end
