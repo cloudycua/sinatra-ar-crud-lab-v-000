@@ -33,4 +33,6 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
+# looks up post by id
+# loads edit form with existing post displayed in form
 end
