@@ -49,5 +49,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  
+# deletes post by id and redirect to page showing all posts
+# delete/action button is in the show.erb
+
 end
