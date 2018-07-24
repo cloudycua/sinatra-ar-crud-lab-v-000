@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
 # creates a post from form submittion and adds to table
-  get '/posts' do
+  post '/posts' do
     @post = Post.create(params)
     redirect to '/posts'
   end
