@@ -26,4 +26,11 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+# creates @posts variable to pass post matching id to view
+# loads show page and displays the post
+  get '/posts/id' do
+    @posts = Post.find_by_id(params[:id])
+    erb :show
+  end
+
 end
