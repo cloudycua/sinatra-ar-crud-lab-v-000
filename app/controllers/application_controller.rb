@@ -40,4 +40,11 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
+# updates a post with content from edit form and displays changed post
+  patch '/posts/:id' do
+    @post = Post.find_by_id(params[:id])
+    @post.name = params[:name]
+    @post.content = params[:content]
+    @post.save
+    erb :show
 end
